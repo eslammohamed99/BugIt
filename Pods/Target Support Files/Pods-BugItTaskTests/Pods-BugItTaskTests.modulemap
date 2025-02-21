@@ -1,0 +1,6 @@
+framework module Pods_BugItTaskTests {
+  umbrella header "Pods-BugItTaskTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
