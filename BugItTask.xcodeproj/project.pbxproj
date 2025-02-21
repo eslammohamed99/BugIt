@@ -6,6 +6,29 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		194272ED2D68A5EC00285D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194272DF2D68A5EC00285D55 /* Assets.xcassets */; };
+		194272EF2D68A5EC00285D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194272E22D68A5EC00285D55 /* LaunchScreen.storyboard */; };
+		194272F02D68A5EC00285D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194272E42D68A5EC00285D55 /* Main.storyboard */; };
+		194272F12D68A5EC00285D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272E62D68A5EC00285D55 /* ViewController.swift */; };
+		194272F22D68A5EC00285D55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272E52D68A5EC00285D55 /* SceneDelegate.swift */; };
+		194272F52D68A5EC00285D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272DE2D68A5EC00285D55 /* AppDelegate.swift */; };
+		1942730F2D68A69F00285D55 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1942730A2D68A69F00285D55 /* NetworkService.swift */; };
+		194273102D68A69F00285D55 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273022D68A69F00285D55 /* EndPoint.swift */; };
+		194273112D68A69F00285D55 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273082D68A69F00285D55 /* NetworkLogger.swift */; };
+		194273122D68A69F00285D55 /* AddSwiftUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1942730C2D68A69F00285D55 /* AddSwiftUiView.swift */; };
+		194273132D68A69F00285D55 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273052D68A69F00285D55 /* HTTPMethod.swift */; };
+		194273142D68A69F00285D55 /* NetworkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273062D68A69F00285D55 /* NetworkAction.swift */; };
+		194273152D68A69F00285D55 /* ParamterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273002D68A69F00285D55 /* ParamterEncoding.swift */; };
+		194273162D68A69F00285D55 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1942730D2D68A69F00285D55 /* ErrorHandler.swift */; };
+		194273172D68A69F00285D55 /* BaseCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272FC2D68A69F00285D55 /* BaseCoordinatorProtocol.swift */; };
+		194273182D68A69F00285D55 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273042D68A69F00285D55 /* Enviroment.swift */; };
+		194273192D68A69F00285D55 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273072D68A69F00285D55 /* NetworkClient.swift */; };
+		1942731A2D68A69F00285D55 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272FB2D68A69F00285D55 /* BaseCoordinator.swift */; };
+		1942731B2D68A69F00285D55 /* NetworkRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273092D68A69F00285D55 /* NetworkRequestFactory.swift */; };
+		1942731C2D68A69F00285D55 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272FE2D68A69F00285D55 /* LoadingView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		191D11172D678B090000E8FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +50,31 @@
 		191D11002D678B050000E8FF /* BugItTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BugItTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		191D11162D678B090000E8FF /* BugItTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugItTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		191D11202D678B090000E8FF /* BugItTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugItTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		194272DE2D68A5EC00285D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		194272DF2D68A5EC00285D55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		194272E02D68A5EC00285D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194272E12D68A5EC00285D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		194272E32D68A5EC00285D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		194272E52D68A5EC00285D55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		194272E62D68A5EC00285D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		194272E82D68A5EC00285D55 /* BugItTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItTaskTests.swift; sourceTree = "<group>"; };
+		194272EA2D68A5EC00285D55 /* BugItTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItTaskUITests.swift; sourceTree = "<group>"; };
+		194272EB2D68A5EC00285D55 /* BugItTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		194272FB2D68A69F00285D55 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		194272FC2D68A69F00285D55 /* BaseCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		194272FE2D68A69F00285D55 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		194273002D68A69F00285D55 /* ParamterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamterEncoding.swift; sourceTree = "<group>"; };
+		194273022D68A69F00285D55 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		194273042D68A69F00285D55 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		194273052D68A69F00285D55 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		194273062D68A69F00285D55 /* NetworkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAction.swift; sourceTree = "<group>"; };
+		194273072D68A69F00285D55 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		194273082D68A69F00285D55 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		194273092D68A69F00285D55 /* NetworkRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestFactory.swift; sourceTree = "<group>"; };
+		1942730A2D68A69F00285D55 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1942730C2D68A69F00285D55 /* AddSwiftUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSwiftUiView.swift; sourceTree = "<group>"; };
+		1942730D2D68A69F00285D55 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		191D11282D678B090000E8FF /* Exceptions for "BugItTask" folder in "BugItTask" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 191D10FF2D678B050000E8FF /* BugItTask */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		191D11022D678B050000E8FF /* BugItTask */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				191D11282D678B090000E8FF /* Exceptions for "BugItTask" folder in "BugItTask" target */,
-			);
-			path = BugItTask;
-			sourceTree = "<group>";
-		};
-		191D11192D678B090000E8FF /* BugItTaskTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BugItTaskTests;
-			sourceTree = "<group>";
-		};
-		191D11232D678B090000E8FF /* BugItTaskUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BugItTaskUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		191D10FD2D678B050000E8FF /* Frameworks */ = {
@@ -88,9 +104,9 @@
 		191D10F72D678B050000E8FF = {
 			isa = PBXGroup;
 			children = (
-				191D11022D678B050000E8FF /* BugItTask */,
-				191D11192D678B090000E8FF /* BugItTaskTests */,
-				191D11232D678B090000E8FF /* BugItTaskUITests */,
+				194272E72D68A5EC00285D55 /* BugItTask */,
+				194272E92D68A5EC00285D55 /* BugItTaskTests */,
+				194272EC2D68A5EC00285D55 /* BugItTaskUITests */,
 				191D11012D678B050000E8FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +119,99 @@
 				191D11202D678B090000E8FF /* BugItTaskUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		194272E72D68A5EC00285D55 /* BugItTask */ = {
+			isa = PBXGroup;
+			children = (
+				194272FD2D68A69F00285D55 /* BaseCoordinator */,
+				194272FF2D68A69F00285D55 /* Common Views */,
+				1942730B2D68A69F00285D55 /* Network Manager */,
+				1942730E2D68A69F00285D55 /* Utils */,
+				194272DE2D68A5EC00285D55 /* AppDelegate.swift */,
+				194272DF2D68A5EC00285D55 /* Assets.xcassets */,
+				194272E02D68A5EC00285D55 /* Info.plist */,
+				194272E22D68A5EC00285D55 /* LaunchScreen.storyboard */,
+				194272E42D68A5EC00285D55 /* Main.storyboard */,
+				194272E52D68A5EC00285D55 /* SceneDelegate.swift */,
+				194272E62D68A5EC00285D55 /* ViewController.swift */,
+			);
+			path = BugItTask;
+			sourceTree = "<group>";
+		};
+		194272E92D68A5EC00285D55 /* BugItTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				194272E82D68A5EC00285D55 /* BugItTaskTests.swift */,
+			);
+			path = BugItTaskTests;
+			sourceTree = "<group>";
+		};
+		194272EC2D68A5EC00285D55 /* BugItTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				194272EA2D68A5EC00285D55 /* BugItTaskUITests.swift */,
+				194272EB2D68A5EC00285D55 /* BugItTaskUITestsLaunchTests.swift */,
+			);
+			path = BugItTaskUITests;
+			sourceTree = "<group>";
+		};
+		194272FD2D68A69F00285D55 /* BaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				194272FB2D68A69F00285D55 /* BaseCoordinator.swift */,
+				194272FC2D68A69F00285D55 /* BaseCoordinatorProtocol.swift */,
+			);
+			path = BaseCoordinator;
+			sourceTree = "<group>";
+		};
+		194272FF2D68A69F00285D55 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				194272FE2D68A69F00285D55 /* LoadingView.swift */,
+			);
+			path = "Common Views";
+			sourceTree = "<group>";
+		};
+		194273012D68A69F00285D55 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				194273002D68A69F00285D55 /* ParamterEncoding.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		194273032D68A69F00285D55 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				194273022D68A69F00285D55 /* EndPoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		1942730B2D68A69F00285D55 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				194273012D68A69F00285D55 /* Encoding */,
+				194273032D68A69F00285D55 /* Endpoint */,
+				194273042D68A69F00285D55 /* Enviroment.swift */,
+				194273052D68A69F00285D55 /* HTTPMethod.swift */,
+				194273062D68A69F00285D55 /* NetworkAction.swift */,
+				194273072D68A69F00285D55 /* NetworkClient.swift */,
+				194273082D68A69F00285D55 /* NetworkLogger.swift */,
+				194273092D68A69F00285D55 /* NetworkRequestFactory.swift */,
+				1942730A2D68A69F00285D55 /* NetworkService.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		1942730E2D68A69F00285D55 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1942730C2D68A69F00285D55 /* AddSwiftUiView.swift */,
+				1942730D2D68A69F00285D55 /* ErrorHandler.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +228,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				191D11022D678B050000E8FF /* BugItTask */,
 			);
 			name = BugItTask;
 			packageProductDependencies = (
@@ -143,9 +249,6 @@
 			dependencies = (
 				191D11182D678B090000E8FF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				191D11192D678B090000E8FF /* BugItTaskTests */,
-			);
 			name = BugItTaskTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +268,6 @@
 			);
 			dependencies = (
 				191D11222D678B090000E8FF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				191D11232D678B090000E8FF /* BugItTaskUITests */,
 			);
 			name = BugItTaskUITests;
 			packageProductDependencies = (
@@ -225,6 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				194272ED2D68A5EC00285D55 /* Assets.xcassets in Resources */,
+				194272EF2D68A5EC00285D55 /* LaunchScreen.storyboard in Resources */,
+				194272F02D68A5EC00285D55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +352,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				194272F12D68A5EC00285D55 /* ViewController.swift in Sources */,
+				194272F22D68A5EC00285D55 /* SceneDelegate.swift in Sources */,
+				1942730F2D68A69F00285D55 /* NetworkService.swift in Sources */,
+				194273102D68A69F00285D55 /* EndPoint.swift in Sources */,
+				194273112D68A69F00285D55 /* NetworkLogger.swift in Sources */,
+				194273122D68A69F00285D55 /* AddSwiftUiView.swift in Sources */,
+				194273132D68A69F00285D55 /* HTTPMethod.swift in Sources */,
+				194273142D68A69F00285D55 /* NetworkAction.swift in Sources */,
+				194273152D68A69F00285D55 /* ParamterEncoding.swift in Sources */,
+				194273162D68A69F00285D55 /* ErrorHandler.swift in Sources */,
+				194273172D68A69F00285D55 /* BaseCoordinatorProtocol.swift in Sources */,
+				194273182D68A69F00285D55 /* Enviroment.swift in Sources */,
+				194273192D68A69F00285D55 /* NetworkClient.swift in Sources */,
+				1942731A2D68A69F00285D55 /* BaseCoordinator.swift in Sources */,
+				1942731B2D68A69F00285D55 /* NetworkRequestFactory.swift in Sources */,
+				1942731C2D68A69F00285D55 /* LoadingView.swift in Sources */,
+				194272F52D68A5EC00285D55 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +401,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		194272E22D68A5EC00285D55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				194272E12D68A5EC00285D55 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		194272E42D68A5EC00285D55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				194272E32D68A5EC00285D55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		191D112A2D678B090000E8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -292,6 +431,7 @@
 				DEVELOPMENT_TEAM = 66J9DSZK6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BugItTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BugIt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +460,7 @@
 				DEVELOPMENT_TEAM = 66J9DSZK6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BugItTask/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BugIt;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
