@@ -35,7 +35,6 @@
 		196C8E4F2D68C08100CF3D61 /* BugItListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E4E2D68C08100CF3D61 /* BugItListUI.swift */; };
 		196C8E522D68CA6D00CF3D61 /* GoogleSheetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E512D68CA6D00CF3D61 /* GoogleSheetsManager.swift */; };
 		196C8E552D68CD9A00CF3D61 /* GoogleSheetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E542D68CD9A00CF3D61 /* GoogleSheetUseCase.swift */; };
-		196C8E572D68D32300CF3D61 /* bugit-task.json in Resources */ = {isa = PBXBuildFile; fileRef = 196C8E562D68D32300CF3D61 /* bugit-task.json */; };
 		196C8E5A2D68DF7A00CF3D61 /* BugListRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */; };
 		196C8E5C2D68DF8700CF3D61 /* BugListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */; };
 		196C8E5E2D68DFD200CF3D61 /* BugItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */; };
@@ -112,7 +111,6 @@
 		196C8E4E2D68C08100CF3D61 /* BugItListUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListUI.swift; sourceTree = "<group>"; };
 		196C8E512D68CA6D00CF3D61 /* GoogleSheetsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsManager.swift; sourceTree = "<group>"; };
 		196C8E542D68CD9A00CF3D61 /* GoogleSheetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetUseCase.swift; sourceTree = "<group>"; };
-		196C8E562D68D32300CF3D61 /* bugit-task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "bugit-task.json"; sourceTree = "<group>"; };
 		196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListRepresentableView.swift; sourceTree = "<group>"; };
 		196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListTableView.swift; sourceTree = "<group>"; };
 		196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItemViewCell.swift; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				196C8E782D6903C800CF3D61 /* ImagePickerManager */,
-				196C8E562D68D32300CF3D61 /* bugit-task.json */,
 				196C8E532D68CD8900CF3D61 /* Repo */,
 				196C8E502D68CA3E00CF3D61 /* GoogleSheetManager */,
 				196C8E3B2D68BBAB00CF3D61 /* BugItList */,
@@ -553,7 +550,6 @@
 			files = (
 				194272ED2D68A5EC00285D55 /* Assets.xcassets in Resources */,
 				194272EF2D68A5EC00285D55 /* LaunchScreen.storyboard in Resources */,
-				196C8E572D68D32300CF3D61 /* bugit-task.json in Resources */,
 				194272F02D68A5EC00285D55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
