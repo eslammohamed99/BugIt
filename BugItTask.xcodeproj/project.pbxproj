@@ -10,8 +10,6 @@
 		194272ED2D68A5EC00285D55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194272DF2D68A5EC00285D55 /* Assets.xcassets */; };
 		194272EF2D68A5EC00285D55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194272E22D68A5EC00285D55 /* LaunchScreen.storyboard */; };
 		194272F02D68A5EC00285D55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194272E42D68A5EC00285D55 /* Main.storyboard */; };
-		194272F12D68A5EC00285D55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272E62D68A5EC00285D55 /* ViewController.swift */; };
-		194272F22D68A5EC00285D55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272E52D68A5EC00285D55 /* SceneDelegate.swift */; };
 		194272F52D68A5EC00285D55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272DE2D68A5EC00285D55 /* AppDelegate.swift */; };
 		1942730F2D68A69F00285D55 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1942730A2D68A69F00285D55 /* NetworkService.swift */; };
 		194273102D68A69F00285D55 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273022D68A69F00285D55 /* EndPoint.swift */; };
@@ -27,6 +25,20 @@
 		1942731A2D68A69F00285D55 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272FB2D68A69F00285D55 /* BaseCoordinator.swift */; };
 		1942731B2D68A69F00285D55 /* NetworkRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194273092D68A69F00285D55 /* NetworkRequestFactory.swift */; };
 		1942731C2D68A69F00285D55 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194272FE2D68A69F00285D55 /* LoadingView.swift */; };
+		196C8E3E2D68BBD200CF3D61 /* BugItListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E3D2D68BBD200CF3D61 /* BugItListVC.swift */; };
+		196C8E412D68BC3200CF3D61 /* BugItListCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E402D68BC3200CF3D61 /* BugItListCoordinatorProtocol.swift */; };
+		196C8E432D68BC4200CF3D61 /* BugItListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E422D68BC4200CF3D61 /* BugItListCoordinator.swift */; };
+		196C8E462D68BD5D00CF3D61 /* BugItListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E452D68BD5D00CF3D61 /* BugItListViewModelProtocol.swift */; };
+		196C8E482D68BD6D00CF3D61 /* BugItListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E472D68BD6D00CF3D61 /* BugItListViewModel.swift */; };
+		196C8E4B2D68BDEB00CF3D61 /* BugListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E4A2D68BDEB00CF3D61 /* BugListModel.swift */; };
+		196C8E4D2D68BE4900CF3D61 /* BugItListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E4C2D68BE4900CF3D61 /* BugItListViewProtocol.swift */; };
+		196C8E4F2D68C08100CF3D61 /* BugItListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E4E2D68C08100CF3D61 /* BugItListUI.swift */; };
+		196C8E522D68CA6D00CF3D61 /* GoogleSheetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E512D68CA6D00CF3D61 /* GoogleSheetsManager.swift */; };
+		196C8E552D68CD9A00CF3D61 /* GoogleSheetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E542D68CD9A00CF3D61 /* GoogleSheetUseCase.swift */; };
+		196C8E572D68D32300CF3D61 /* bugit-task.json in Resources */ = {isa = PBXBuildFile; fileRef = 196C8E562D68D32300CF3D61 /* bugit-task.json */; };
+		196C8E5A2D68DF7A00CF3D61 /* BugListRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */; };
+		196C8E5C2D68DF8700CF3D61 /* BugListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */; };
+		196C8E5E2D68DFD200CF3D61 /* BugItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */; };
 		27C4FE61E405675F461FCBE0 /* Pods_BugItTask_BugItTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DADDD0BC2F476C155772097 /* Pods_BugItTask_BugItTaskUITests.framework */; };
 		2928D524AE1864F76A69250D /* Pods_BugItTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDE95CB677D60E9A9B239AC /* Pods_BugItTaskTests.framework */; };
 		89CDB43FC700ADE91E150D3D /* Pods_BugItTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A76B15F15EEB07961F123 /* Pods_BugItTask.framework */; };
@@ -60,8 +72,6 @@
 		194272E02D68A5EC00285D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		194272E12D68A5EC00285D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		194272E32D68A5EC00285D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		194272E52D68A5EC00285D55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		194272E62D68A5EC00285D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		194272E82D68A5EC00285D55 /* BugItTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItTaskTests.swift; sourceTree = "<group>"; };
 		194272EA2D68A5EC00285D55 /* BugItTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItTaskUITests.swift; sourceTree = "<group>"; };
 		194272EB2D68A5EC00285D55 /* BugItTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -79,6 +89,20 @@
 		1942730A2D68A69F00285D55 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		1942730C2D68A69F00285D55 /* AddSwiftUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSwiftUiView.swift; sourceTree = "<group>"; };
 		1942730D2D68A69F00285D55 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		196C8E3D2D68BBD200CF3D61 /* BugItListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListVC.swift; sourceTree = "<group>"; };
+		196C8E402D68BC3200CF3D61 /* BugItListCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		196C8E422D68BC4200CF3D61 /* BugItListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListCoordinator.swift; sourceTree = "<group>"; };
+		196C8E452D68BD5D00CF3D61 /* BugItListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListViewModelProtocol.swift; sourceTree = "<group>"; };
+		196C8E472D68BD6D00CF3D61 /* BugItListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListViewModel.swift; sourceTree = "<group>"; };
+		196C8E4A2D68BDEB00CF3D61 /* BugListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListModel.swift; sourceTree = "<group>"; };
+		196C8E4C2D68BE4900CF3D61 /* BugItListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListViewProtocol.swift; sourceTree = "<group>"; };
+		196C8E4E2D68C08100CF3D61 /* BugItListUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItListUI.swift; sourceTree = "<group>"; };
+		196C8E512D68CA6D00CF3D61 /* GoogleSheetsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetsManager.swift; sourceTree = "<group>"; };
+		196C8E542D68CD9A00CF3D61 /* GoogleSheetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSheetUseCase.swift; sourceTree = "<group>"; };
+		196C8E562D68D32300CF3D61 /* bugit-task.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "bugit-task.json"; sourceTree = "<group>"; };
+		196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListRepresentableView.swift; sourceTree = "<group>"; };
+		196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListTableView.swift; sourceTree = "<group>"; };
+		196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItemViewCell.swift; sourceTree = "<group>"; };
 		541A37A033BD97A1CFFE67E4 /* Pods-BugItTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugItTaskTests.release.xcconfig"; path = "Target Support Files/Pods-BugItTaskTests/Pods-BugItTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B86E7A26802FDE9E4F30C76 /* Pods-BugItTask-BugItTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugItTask-BugItTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-BugItTask-BugItTaskUITests/Pods-BugItTask-BugItTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8A40D294E5FADFFD25E42DDB /* Pods-BugItTask-BugItTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugItTask-BugItTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-BugItTask-BugItTaskUITests/Pods-BugItTask-BugItTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +165,11 @@
 		194272E72D68A5EC00285D55 /* BugItTask */ = {
 			isa = PBXGroup;
 			children = (
+				196C8E562D68D32300CF3D61 /* bugit-task.json */,
+				196C8E532D68CD8900CF3D61 /* Repo */,
+				196C8E502D68CA3E00CF3D61 /* GoogleSheetManager */,
+				196C8E3B2D68BBAB00CF3D61 /* BugItList */,
+				196C8E5F2D68E89F00CF3D61 /* BugItDetailView */,
 				194272FD2D68A69F00285D55 /* BaseCoordinator */,
 				194272FF2D68A69F00285D55 /* Common Views */,
 				1942730B2D68A69F00285D55 /* Network Manager */,
@@ -150,8 +179,6 @@
 				194272E02D68A5EC00285D55 /* Info.plist */,
 				194272E22D68A5EC00285D55 /* LaunchScreen.storyboard */,
 				194272E42D68A5EC00285D55 /* Main.storyboard */,
-				194272E52D68A5EC00285D55 /* SceneDelegate.swift */,
-				194272E62D68A5EC00285D55 /* ViewController.swift */,
 			);
 			path = BugItTask;
 			sourceTree = "<group>";
@@ -229,6 +256,87 @@
 				1942730D2D68A69F00285D55 /* ErrorHandler.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		196C8E3B2D68BBAB00CF3D61 /* BugItList */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E492D68BDD900CF3D61 /* Model */,
+				196C8E442D68BD3F00CF3D61 /* ViewModel */,
+				196C8E3F2D68BC0800CF3D61 /* Coordinator */,
+				196C8E3C2D68BBB700CF3D61 /* View */,
+			);
+			path = BugItList;
+			sourceTree = "<group>";
+		};
+		196C8E3C2D68BBB700CF3D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E582D68DF6000CF3D61 /* BugListTV */,
+				196C8E3D2D68BBD200CF3D61 /* BugItListVC.swift */,
+				196C8E4C2D68BE4900CF3D61 /* BugItListViewProtocol.swift */,
+				196C8E4E2D68C08100CF3D61 /* BugItListUI.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		196C8E3F2D68BC0800CF3D61 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E402D68BC3200CF3D61 /* BugItListCoordinatorProtocol.swift */,
+				196C8E422D68BC4200CF3D61 /* BugItListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		196C8E442D68BD3F00CF3D61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E452D68BD5D00CF3D61 /* BugItListViewModelProtocol.swift */,
+				196C8E472D68BD6D00CF3D61 /* BugItListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		196C8E492D68BDD900CF3D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E4A2D68BDEB00CF3D61 /* BugListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		196C8E502D68CA3E00CF3D61 /* GoogleSheetManager */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E512D68CA6D00CF3D61 /* GoogleSheetsManager.swift */,
+			);
+			path = GoogleSheetManager;
+			sourceTree = "<group>";
+		};
+		196C8E532D68CD8900CF3D61 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E542D68CD9A00CF3D61 /* GoogleSheetUseCase.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		196C8E582D68DF6000CF3D61 /* BugListTV */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */,
+				196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */,
+				196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */,
+			);
+			path = BugListTV;
+			sourceTree = "<group>";
+		};
+		196C8E5F2D68E89F00CF3D61 /* BugItDetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BugItDetailView;
 			sourceTree = "<group>";
 		};
 		237E4FCAC5034EDC4D56C514 /* Pods */ = {
@@ -366,6 +474,7 @@
 			files = (
 				194272ED2D68A5EC00285D55 /* Assets.xcassets in Resources */,
 				194272EF2D68A5EC00285D55 /* LaunchScreen.storyboard in Resources */,
+				196C8E572D68D32300CF3D61 /* bugit-task.json in Resources */,
 				194272F02D68A5EC00285D55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,20 +603,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				194272F12D68A5EC00285D55 /* ViewController.swift in Sources */,
-				194272F22D68A5EC00285D55 /* SceneDelegate.swift in Sources */,
+				196C8E4F2D68C08100CF3D61 /* BugItListUI.swift in Sources */,
+				196C8E3E2D68BBD200CF3D61 /* BugItListVC.swift in Sources */,
 				1942730F2D68A69F00285D55 /* NetworkService.swift in Sources */,
+				196C8E5C2D68DF8700CF3D61 /* BugListTableView.swift in Sources */,
+				196C8E5E2D68DFD200CF3D61 /* BugItemViewCell.swift in Sources */,
 				194273102D68A69F00285D55 /* EndPoint.swift in Sources */,
+				196C8E412D68BC3200CF3D61 /* BugItListCoordinatorProtocol.swift in Sources */,
 				194273112D68A69F00285D55 /* NetworkLogger.swift in Sources */,
 				194273122D68A69F00285D55 /* AddSwiftUiView.swift in Sources */,
+				196C8E482D68BD6D00CF3D61 /* BugItListViewModel.swift in Sources */,
+				196C8E522D68CA6D00CF3D61 /* GoogleSheetsManager.swift in Sources */,
 				194273132D68A69F00285D55 /* HTTPMethod.swift in Sources */,
+				196C8E462D68BD5D00CF3D61 /* BugItListViewModelProtocol.swift in Sources */,
+				196C8E4D2D68BE4900CF3D61 /* BugItListViewProtocol.swift in Sources */,
 				194273142D68A69F00285D55 /* NetworkAction.swift in Sources */,
 				194273152D68A69F00285D55 /* ParamterEncoding.swift in Sources */,
+				196C8E432D68BC4200CF3D61 /* BugItListCoordinator.swift in Sources */,
 				194273162D68A69F00285D55 /* ErrorHandler.swift in Sources */,
 				194273172D68A69F00285D55 /* BaseCoordinatorProtocol.swift in Sources */,
 				194273182D68A69F00285D55 /* Enviroment.swift in Sources */,
 				194273192D68A69F00285D55 /* NetworkClient.swift in Sources */,
 				1942731A2D68A69F00285D55 /* BaseCoordinator.swift in Sources */,
+				196C8E552D68CD9A00CF3D61 /* GoogleSheetUseCase.swift in Sources */,
+				196C8E4B2D68BDEB00CF3D61 /* BugListModel.swift in Sources */,
+				196C8E5A2D68DF7A00CF3D61 /* BugListRepresentableView.swift in Sources */,
 				1942731B2D68A69F00285D55 /* NetworkRequestFactory.swift in Sources */,
 				1942731C2D68A69F00285D55 /* LoadingView.swift in Sources */,
 				194272F52D68A5EC00285D55 /* AppDelegate.swift in Sources */,
@@ -576,11 +696,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BugItTask/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BugIt;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,9 +711,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BugIt.Eslam.Task.BugItTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -607,11 +734,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BugItTask/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BugIt;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -619,9 +749,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.BugIt.Eslam.Task.BugItTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
