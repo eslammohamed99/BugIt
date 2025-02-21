@@ -9,7 +9,7 @@ import Foundation
 
 enum BugItListViewModelCallbackType {
     case back
-    case gotoBugDetail(itemInfo:PresentedDataViewModel)
+    case gotoBugDetail(itemInfo:BugPresentedDataViewModel)
     case uploadBug
 }
 

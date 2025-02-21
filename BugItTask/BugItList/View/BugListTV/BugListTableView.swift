@@ -13,7 +13,7 @@ class BugListTableView: UIView {
     weak var viewModel: BugItListViewModel!
     var tableView: UITableView
     let cellId = "Cell"
-    var didTap: ((PresentedDataViewModel) -> Void)?
+    var didTap: ((BugPresentedDataViewModel) -> Void)?
     private var cancellables = Set<AnyCancellable>()
     private let refreshControl = UIRefreshControl() // Add refresh control
     

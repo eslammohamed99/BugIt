@@ -11,7 +11,7 @@ import SwiftUI
 
 struct BugListRepresentableView: UIViewRepresentable {
     var viewModel: BugItListViewModel
-    var actionCallback: ((PresentedDataViewModel) -> Void)?
+    var actionCallback: ((BugPresentedDataViewModel) -> Void)?
     
     func makeUIView(context: Context) -> UIView {
         let uiView = BugListTableView(

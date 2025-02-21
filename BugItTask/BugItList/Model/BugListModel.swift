@@ -6,25 +6,31 @@
 //
 
 import Foundation
-public struct PresentedDataViewModel {
-    static let dummy = PresentedDataViewModel(model: .dummy)
+public struct BugPresentedDataViewModel {
+    static let dummy = BugPresentedDataViewModel(model: .dummy)
     public var name: String
+    public var image: String
     public var bugDate: String
+    public var decription: String
     
     
     init(model: BugInfoModel) {
         self.name = model.name ?? ""
         self.bugDate = model.createdAt ?? ""
+        self.image = model.image ?? ""
+        self.decription = model.description ?? ""
     }
 }
 
+
 public extension Array where Element == BugInfoModel {
-    func toModels() -> [PresentedDataViewModel] {
+    func toModels() -> [BugPresentedDataViewModel] {
         return self.map {
-            PresentedDataViewModel(model: $0)
+            BugPresentedDataViewModel(model: $0)
         }
     }
 }
+
 
 public struct BugInfoModel: Codable, Identifiable {
     static let dummy = BugInfoModel(

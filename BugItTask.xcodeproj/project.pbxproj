@@ -39,6 +39,19 @@
 		196C8E5A2D68DF7A00CF3D61 /* BugListRepresentableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */; };
 		196C8E5C2D68DF8700CF3D61 /* BugListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */; };
 		196C8E5E2D68DFD200CF3D61 /* BugItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */; };
+		196C8E672D68EA3500CF3D61 /* BugDetailCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E662D68EA3500CF3D61 /* BugDetailCoordinatorProtocol.swift */; };
+		196C8E692D68EA4400CF3D61 /* BugDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E682D68EA4400CF3D61 /* BugDetailCoordinator.swift */; };
+		196C8E6B2D68EAA500CF3D61 /* BugDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E6A2D68EA9500CF3D61 /* BugDetailViewModelProtocol.swift */; };
+		196C8E6D2D68EAB100CF3D61 /* BugDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E6C2D68EAA800CF3D61 /* BugDetailViewModel.swift */; };
+		196C8E6F2D68EB1D00CF3D61 /* BugDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E6E2D68EB0F00CF3D61 /* BugDetailView.swift */; };
+		196C8E712D68EB2F00CF3D61 /* BugDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E702D68EB2100CF3D61 /* BugDetailViewProtocol.swift */; };
+		196C8E732D68EB3B00CF3D61 /* BugDetailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E722D68EB3700CF3D61 /* BugDetailUIView.swift */; };
+		196C8E752D68EBC200CF3D61 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E742D68EBC100CF3D61 /* CustomNavigationBar.swift */; };
+		196C8E772D68F5BA00CF3D61 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E762D68F5B600CF3D61 /* AttributedTextView.swift */; };
+		196C8E7A2D6903E100CF3D61 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E792D6903D400CF3D61 /* ImagePickerManager.swift */; };
+		196C8E7C2D69042E00CF3D61 /* ImagePickerManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E7B2D69042E00CF3D61 /* ImagePickerManagerProtocol.swift */; };
+		196C8E7E2D69047F00CF3D61 /* Image+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E7D2D69047F00CF3D61 /* Image+Size.swift */; };
+		196C8E802D69068100CF3D61 /* ImagePickerPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C8E7F2D69068100CF3D61 /* ImagePickerPermission.swift */; };
 		27C4FE61E405675F461FCBE0 /* Pods_BugItTask_BugItTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DADDD0BC2F476C155772097 /* Pods_BugItTask_BugItTaskUITests.framework */; };
 		2928D524AE1864F76A69250D /* Pods_BugItTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDE95CB677D60E9A9B239AC /* Pods_BugItTaskTests.framework */; };
 		89CDB43FC700ADE91E150D3D /* Pods_BugItTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A76B15F15EEB07961F123 /* Pods_BugItTask.framework */; };
@@ -103,6 +116,19 @@
 		196C8E592D68DF7A00CF3D61 /* BugListRepresentableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListRepresentableView.swift; sourceTree = "<group>"; };
 		196C8E5B2D68DF7D00CF3D61 /* BugListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugListTableView.swift; sourceTree = "<group>"; };
 		196C8E5D2D68DFD200CF3D61 /* BugItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugItemViewCell.swift; sourceTree = "<group>"; };
+		196C8E662D68EA3500CF3D61 /* BugDetailCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		196C8E682D68EA4400CF3D61 /* BugDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailCoordinator.swift; sourceTree = "<group>"; };
+		196C8E6A2D68EA9500CF3D61 /* BugDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		196C8E6C2D68EAA800CF3D61 /* BugDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailViewModel.swift; sourceTree = "<group>"; };
+		196C8E6E2D68EB0F00CF3D61 /* BugDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailView.swift; sourceTree = "<group>"; };
+		196C8E702D68EB2100CF3D61 /* BugDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailViewProtocol.swift; sourceTree = "<group>"; };
+		196C8E722D68EB3700CF3D61 /* BugDetailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugDetailUIView.swift; sourceTree = "<group>"; };
+		196C8E742D68EBC100CF3D61 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		196C8E762D68F5B600CF3D61 /* AttributedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
+		196C8E792D6903D400CF3D61 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		196C8E7B2D69042E00CF3D61 /* ImagePickerManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManagerProtocol.swift; sourceTree = "<group>"; };
+		196C8E7D2D69047F00CF3D61 /* Image+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Size.swift"; sourceTree = "<group>"; };
+		196C8E7F2D69068100CF3D61 /* ImagePickerPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPermission.swift; sourceTree = "<group>"; };
 		541A37A033BD97A1CFFE67E4 /* Pods-BugItTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugItTaskTests.release.xcconfig"; path = "Target Support Files/Pods-BugItTaskTests/Pods-BugItTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B86E7A26802FDE9E4F30C76 /* Pods-BugItTask-BugItTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugItTask-BugItTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-BugItTask-BugItTaskUITests/Pods-BugItTask-BugItTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8A40D294E5FADFFD25E42DDB /* Pods-BugItTask-BugItTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BugItTask-BugItTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-BugItTask-BugItTaskUITests/Pods-BugItTask-BugItTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +191,7 @@
 		194272E72D68A5EC00285D55 /* BugItTask */ = {
 			isa = PBXGroup;
 			children = (
+				196C8E782D6903C800CF3D61 /* ImagePickerManager */,
 				196C8E562D68D32300CF3D61 /* bugit-task.json */,
 				196C8E532D68CD8900CF3D61 /* Repo */,
 				196C8E502D68CA3E00CF3D61 /* GoogleSheetManager */,
@@ -212,6 +239,8 @@
 		194272FF2D68A69F00285D55 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
+				196C8E762D68F5B600CF3D61 /* AttributedTextView.swift */,
+				196C8E742D68EBC100CF3D61 /* CustomNavigationBar.swift */,
 				194272FE2D68A69F00285D55 /* LoadingView.swift */,
 			);
 			path = "Common Views";
@@ -335,8 +364,58 @@
 		196C8E5F2D68E89F00CF3D61 /* BugItDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				196C8E632D68EA0000CF3D61 /* View */,
+				196C8E622D68E9FA00CF3D61 /* ViewModel */,
+				196C8E612D68E9F200CF3D61 /* Coordinator */,
+				196C8E602D68E9EB00CF3D61 /* Model */,
 			);
 			path = BugItDetailView;
+			sourceTree = "<group>";
+		};
+		196C8E602D68E9EB00CF3D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		196C8E612D68E9F200CF3D61 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E662D68EA3500CF3D61 /* BugDetailCoordinatorProtocol.swift */,
+				196C8E682D68EA4400CF3D61 /* BugDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		196C8E622D68E9FA00CF3D61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E6C2D68EAA800CF3D61 /* BugDetailViewModel.swift */,
+				196C8E6A2D68EA9500CF3D61 /* BugDetailViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		196C8E632D68EA0000CF3D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E722D68EB3700CF3D61 /* BugDetailUIView.swift */,
+				196C8E702D68EB2100CF3D61 /* BugDetailViewProtocol.swift */,
+				196C8E6E2D68EB0F00CF3D61 /* BugDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		196C8E782D6903C800CF3D61 /* ImagePickerManager */ = {
+			isa = PBXGroup;
+			children = (
+				196C8E792D6903D400CF3D61 /* ImagePickerManager.swift */,
+				196C8E7B2D69042E00CF3D61 /* ImagePickerManagerProtocol.swift */,
+				196C8E7D2D69047F00CF3D61 /* Image+Size.swift */,
+				196C8E7F2D69068100CF3D61 /* ImagePickerPermission.swift */,
+			);
+			path = ImagePickerManager;
 			sourceTree = "<group>";
 		};
 		237E4FCAC5034EDC4D56C514 /* Pods */ = {
@@ -608,6 +687,7 @@
 				1942730F2D68A69F00285D55 /* NetworkService.swift in Sources */,
 				196C8E5C2D68DF8700CF3D61 /* BugListTableView.swift in Sources */,
 				196C8E5E2D68DFD200CF3D61 /* BugItemViewCell.swift in Sources */,
+				196C8E772D68F5BA00CF3D61 /* AttributedTextView.swift in Sources */,
 				194273102D68A69F00285D55 /* EndPoint.swift in Sources */,
 				196C8E412D68BC3200CF3D61 /* BugItListCoordinatorProtocol.swift in Sources */,
 				194273112D68A69F00285D55 /* NetworkLogger.swift in Sources */,
@@ -615,21 +695,33 @@
 				196C8E482D68BD6D00CF3D61 /* BugItListViewModel.swift in Sources */,
 				196C8E522D68CA6D00CF3D61 /* GoogleSheetsManager.swift in Sources */,
 				194273132D68A69F00285D55 /* HTTPMethod.swift in Sources */,
+				196C8E7A2D6903E100CF3D61 /* ImagePickerManager.swift in Sources */,
 				196C8E462D68BD5D00CF3D61 /* BugItListViewModelProtocol.swift in Sources */,
 				196C8E4D2D68BE4900CF3D61 /* BugItListViewProtocol.swift in Sources */,
 				194273142D68A69F00285D55 /* NetworkAction.swift in Sources */,
 				194273152D68A69F00285D55 /* ParamterEncoding.swift in Sources */,
+				196C8E732D68EB3B00CF3D61 /* BugDetailUIView.swift in Sources */,
+				196C8E6D2D68EAB100CF3D61 /* BugDetailViewModel.swift in Sources */,
+				196C8E7E2D69047F00CF3D61 /* Image+Size.swift in Sources */,
 				196C8E432D68BC4200CF3D61 /* BugItListCoordinator.swift in Sources */,
 				194273162D68A69F00285D55 /* ErrorHandler.swift in Sources */,
 				194273172D68A69F00285D55 /* BaseCoordinatorProtocol.swift in Sources */,
+				196C8E712D68EB2F00CF3D61 /* BugDetailViewProtocol.swift in Sources */,
+				196C8E672D68EA3500CF3D61 /* BugDetailCoordinatorProtocol.swift in Sources */,
+				196C8E6F2D68EB1D00CF3D61 /* BugDetailView.swift in Sources */,
 				194273182D68A69F00285D55 /* Enviroment.swift in Sources */,
+				196C8E802D69068100CF3D61 /* ImagePickerPermission.swift in Sources */,
 				194273192D68A69F00285D55 /* NetworkClient.swift in Sources */,
 				1942731A2D68A69F00285D55 /* BaseCoordinator.swift in Sources */,
 				196C8E552D68CD9A00CF3D61 /* GoogleSheetUseCase.swift in Sources */,
 				196C8E4B2D68BDEB00CF3D61 /* BugListModel.swift in Sources */,
+				196C8E6B2D68EAA500CF3D61 /* BugDetailViewModelProtocol.swift in Sources */,
+				196C8E752D68EBC200CF3D61 /* CustomNavigationBar.swift in Sources */,
 				196C8E5A2D68DF7A00CF3D61 /* BugListRepresentableView.swift in Sources */,
+				196C8E692D68EA4400CF3D61 /* BugDetailCoordinator.swift in Sources */,
 				1942731B2D68A69F00285D55 /* NetworkRequestFactory.swift in Sources */,
 				1942731C2D68A69F00285D55 /* LoadingView.swift in Sources */,
+				196C8E7C2D69042E00CF3D61 /* ImagePickerManagerProtocol.swift in Sources */,
 				194272F52D68A5EC00285D55 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

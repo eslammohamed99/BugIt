@@ -4,6 +4,12 @@
 <dict>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This allows us to save images into your mobile</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This allows us to save images into your mobile</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This allows us to save images into your mobile</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

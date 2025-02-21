@@ -34,6 +34,8 @@ private struct BugListUIView: View {
     @ObservedObject var viewModel: BugItListViewModel
     
     var body: some View {
-        BugListRepresentableView(viewModel: viewModel)
+        BugListRepresentableView(viewModel: viewModel) { bugInfo in
+            self.viewModel.callback(.gotoBugDetail(itemInfo: bugInfo))
+        }
     }
 }

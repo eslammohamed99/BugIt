@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 struct BugCellView: View {
-    let bugInfo: PresentedDataViewModel
+    let bugInfo: BugPresentedDataViewModel
     
     var body: some View {
         HStack(spacing: 15) {
@@ -38,7 +38,7 @@ class BugCellViewItemView: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with bugInfo: PresentedDataViewModel) {
+    func configure(with bugInfo: BugPresentedDataViewModel) {
         contentConfiguration = UIHostingConfiguration {
             BugCellView(bugInfo: bugInfo)
         }

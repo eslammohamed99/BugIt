@@ -27,28 +27,27 @@ class BugItListCoordinator: BaseCoordinator, BugItListCoordinatorProtocol {
         self.navigationController = navigationController
     }
     
-    func gotoBugDetail(bugInfo: PresentedDataViewModel){
-//        struct UseCase: CharacterDetailCoordinatorUseCaseProtocol {
-//            var navigationController: UINavigationController
-//            var characterInfo: PresentedDataViewModel
-//        }
-//        guard let navigationController = navigationController else {
-//            return
-//        }
-//        let coordinator = CharacterDetailCoordinator(
-//            useCase: UseCase(navigationController: navigationController,
-//                             characterInfo: character))
-//        addChild(coordinator)
-//        coordinator.start(
-//            callback: { [weak self] type in
-//                guard let self = self else {
-//                    return
-//                }
-//                switch type {
-//                case.back:
-//                    self.navigationController?.popViewController(animated: true)
-//                }
-//            })
+    func gotoBugDetail(bugInfo: BugPresentedDataViewModel?){
+        struct UseCase: BugDetailCoordinatorUseCaseProtocol {
+            var bugInfo: BugPresentedDataViewModel?
+            var navigationController: UINavigationController
+        }
+        guard let navigationController = navigationController else {
+            return
+        }
+        let coordinator = BugDetailCoordinator(
+            useCase: UseCase(bugInfo: bugInfo, navigationController: navigationController))
+        addChild(coordinator)
+        coordinator.start(
+            callback: { [weak self] type in
+                guard let self = self else {
+                    return
+                }
+                switch type {
+                case.back:
+                    self.navigationController?.popViewController(animated: true)
+                }
+            })
     }
 }
 
@@ -61,7 +60,7 @@ private extension BugItListCoordinator {
             case let .gotoBugDetail(itemInfo):
                 self?.gotoBugDetail(bugInfo: itemInfo)
             case .uploadBug:
-                break
+                self?.gotoBugDetail(bugInfo: nil)
             }
         }
     }

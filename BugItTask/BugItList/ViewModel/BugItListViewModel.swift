@@ -10,7 +10,7 @@ import Combine
 class BugItListViewModel: BugItListViewModelProtocol, ObservableObject {
 
     // MARK: - Published Variables
-    @Published var displayModel = [PresentedDataViewModel]()
+    @Published var displayModel = [BugPresentedDataViewModel]()
     @Published var isLoading = false
     // MARK: - Variables
     var actionsSubject = PassthroughSubject<BugItListActions, Never>()
@@ -75,7 +75,7 @@ class BugItListViewModel: BugItListViewModelProtocol, ObservableObject {
 extension BugItListViewModel {
     enum BugItListActions {
         case back
-        case gotoBugDetail(info:PresentedDataViewModel)
+        case gotoBugDetail(info:BugPresentedDataViewModel)
         case uploadBug
     }
 }
