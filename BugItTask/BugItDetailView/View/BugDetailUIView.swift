@@ -38,7 +38,7 @@ struct BugDetailUIView: View {
                                 .frame(maxWidth: .infinity)
                         }
                     }
-                }
+                }.frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
@@ -114,6 +114,7 @@ extension BugDetailView: ImagePickerDelegate {
         guard let data = image.compressImage(maxMegaByte: 3) else {
             return
         }
+        bugDetailUIView?.viewModel.uploadImage()
 //        let model = UploadImageModel(action: .profileImage, data: data, format: imageFormat)
 //        callback?(.imageUpload(model: model))
 

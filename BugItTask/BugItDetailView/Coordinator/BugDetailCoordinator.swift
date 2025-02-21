@@ -14,7 +14,7 @@ class BugDetailCoordinator: BaseCoordinator, BugDetailCoordinatorProtocol {
     private var viewModel: BugDetailViewModelProtocol?
     required init(useCase: BugDetailCoordinatorUseCaseProtocol) {
         super.init(navigationController: useCase.navigationController)
-        viewModel = BugDetailViewModel(displayModel: useCase.bugInfo, callback: processViewModelCallback())
+        viewModel = BugDetailViewModel(displayModel: useCase.bugInfo, callback: processViewModelCallback(), useCase: GoogelSheetUseCase())
     }
 
     func start(callback: @escaping BugDetailCoordinatorCall) {
