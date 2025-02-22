@@ -19,5 +19,7 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<key>GOOGLE_SHEETS_API_KEY</key>
+	<string>AIzaSyBp4Dg4-ARNbEbaHOGJd1iHEL23sPO8G_U</string>
 </dict>
 </plist>

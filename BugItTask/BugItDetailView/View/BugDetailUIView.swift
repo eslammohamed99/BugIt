@@ -45,6 +45,17 @@ struct BugDetailUIView: View {
                             .stroke(Color.gray.opacity(0.3), lineWidth: 1)
                     )
                     .padding(.bottom, 20)
+                if viewModel.displayModel?.name == nil{
+                    Text("Add Bug Name").font(.system(size: 16, weight: .bold))
+                    TextField(text: $viewModel.bugTitle) {
+                        
+                    }.frame(height: 40)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                        )
+                }
                 if let descrip = viewModel.displayModel?.decription{
                     Text(descrip).font(.system(size: 16, weight: .medium))
                 }
@@ -71,21 +82,23 @@ struct BugDetailUIView: View {
                 Spacer()
                 if viewModel.displayModel == nil{
                     Button {
-                        
+                        self.viewModel.actionsSubject.send(.submitBug)
                     } label: {
                         Text("Submit Bug")
                             .foregroundStyle(.white)
                     }.frame(height: 48)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                        .background(viewModel.isValid ? Color.blue : Color.gray)
                         .cornerRadius(9999)
                         .padding(.horizontal, 10)
+                        .disabled(viewModel.isValid ? false : true)
                     
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding(.horizontal, 16)
+        .loadingOverlay(isLoading: viewModel.isLoading)
         .ignoresSafeArea(SafeAreaRegions.all, edges: .top)
     }
 }
@@ -109,14 +122,9 @@ extension BugDetailView: ImagePickerDelegate {
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFill
         let imageAspectRatio = image.size.width / image.size.height
-//        noteInput.setMediaView(view: imageView,
-//                               aspectRatio: imageAspectRatio)
         guard let data = image.compressImage(maxMegaByte: 3) else {
             return
         }
         bugDetailUIView?.viewModel.uploadImage()
-//        let model = UploadImageModel(action: .profileImage, data: data, format: imageFormat)
-//        callback?(.imageUpload(model: model))
-
     }
 }

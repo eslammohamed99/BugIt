@@ -10,7 +10,7 @@ import GoogleAPIClientForREST
 import GTMSessionFetcher
 protocol GoogelSheetUseCaseProtocol {
     func getBugList() async throws -> [BugInfoModel]
-    func insertBugInfo() async throws -> Bool
+    func insertBugInfo(bugName: String ,bugImage: String, bugDecription: String, bugDate: String) async throws -> Bool
 }
 
 
@@ -29,11 +29,11 @@ public final class GoogelSheetUseCase: GoogelSheetUseCaseProtocol, HTTPClient {
                 throw error
             }
     }
-    func insertBugInfo() async throws -> Bool {
-        let data: [[Any]] = [["Bug Report new",
-                              "https://firebasestorage.googleapis.com:443/v0/b/eslamtask.appspot.com/o/bug-images%2FADF34F8D-8DA0-4E58-B844-61083BDBEB27.jpg?alt=media&token=62c0d16f-f921-4817-9975-5a7ae411b04c",
-                              "description new new ",
-                              "02/04/2026"]]
+    func insertBugInfo(bugName: String ,bugImage: String, bugDecription: String, bugDate: String) async throws -> Bool {
+        let data: [[Any]] = [["\(bugName)",
+                              "\(bugImage)",
+                              "\(bugDecription)",
+                              "\(bugDate)"]]
             do {
                 let data = try await sheetManager.insertData(sheetId: spreadsheetId, range: range, values: data)
                // let bugReports = parseGoogleSheetData(data)

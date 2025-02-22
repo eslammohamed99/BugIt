@@ -5,50 +5,66 @@
 //  Created by Eslam Mohamed on 21/02/2025.
 //
 
-//
-//  GoogleSheetsManager.swift
-//  BugItTask
-//
-//  Created by Eslam Mohamed on 21/02/2025.
-//
-
 import Foundation
 import GoogleAPIClientForREST
 import GTMSessionFetcher
+import AppAuth
+import GTMAppAuth
 
 class GoogleSheetsManager {
     private let service = GTLRSheetsService()
+    private let scopes = [
+            "https://www.googleapis.com/auth/spreadsheets"
+        ]
+    private var currentAuthorization: AuthSession?
 
     init() {
-       // service.apiKey = "AIzaSyBp4Dg4-ARNbEbaHOGJd1iHEL23sPO8G_U" // Use an API key instead of authentication
-        authorizeService()
+        if let apiKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_SHEETS_API_KEY") as? String {
+            service.apiKey = apiKey
+        }
+       // setupOAuth()
     }
     
-//    private func setupServiceAccount() {
-//            guard let path = Bundle.main.path(forResource: "bugit-task", ofType: "json"),
-//                  let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
-//                print("Error: Could not load service account credentials.")
-//                return
-//            }
-//
-//            do {
-//                let auth = try GTMAppAuthFetcherAuthorization(authFromJSONData: jsonData)
-//                service.authorizer = auth
-//            } catch {
-//                print("Error setting up authentication: \(error)")
-//            }
-//        }
-    
-    private func authorizeService() {
-            guard let path = Bundle.main.path(forResource: "bugit-task", ofType: "json") else {
-                print("Failed to load credentials.json")
-                return
-            }
-            let authProvider = GTMAppAuthFetcherAuthorization(authState: nil)
-            service.authorizer = authProvider
+
+    private func setupOAuth() {
+        guard let issuer = URL(string: "https://accounts.google.com/o/oauth2/auth"),
+              let redirectURI = URL(string: "com.googleusercontent.apps.109775075695635212252:/oauth2redirect") else {
+            print("Error setting up OAuth")
+            return
         }
 
+        OIDAuthorizationService.discoverConfiguration(forIssuer: issuer) { configuration, error in
+            guard let config = configuration else {
+                print("Error discovering OAuth configuration: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+
+            let request = OIDAuthorizationRequest(
+                configuration: config,
+                clientId: "109775075695635212252",
+                scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+                redirectURL: redirectURI,
+                responseType: OIDResponseTypeCode,
+                additionalParameters: nil
+            )
+
+            if let presentingVC = UIApplication.shared.windows.first?.rootViewController {
+                OIDAuthorizationService.present(request, presenting: presentingVC) { authResponse, error in
+                    if let error = error {
+                        print("OAuth Authorization error: \(error.localizedDescription)")
+                        return
+                    }
+
+                    if let authResponse = authResponse {
+                        self.currentAuthorization = AuthSession(authState: OIDAuthState(authorizationResponse: authResponse)) 
+                        self.service.authorizer = self.currentAuthorization
+                    }
+                }
+            }
+        }
+    }
     func fetchData(spreadsheetId: String, range: String) async throws -> [[String]] {
+        
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: spreadsheetId, range: range)
 
         return try await withCheckedThrowingContinuation { continuation in

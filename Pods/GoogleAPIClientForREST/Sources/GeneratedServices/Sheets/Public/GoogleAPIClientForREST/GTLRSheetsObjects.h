@@ -158,7 +158,6 @@
 @class GTLRSheets_KeyValueFormat;
 @class GTLRSheets_LineStyle;
 @class GTLRSheets_Link;
-@class GTLRSheets_LookerDataSourceSpec;
 @class GTLRSheets_ManualRule;
 @class GTLRSheets_ManualRuleGroup;
 @class GTLRSheets_MatchedDeveloperMetadata;
@@ -3607,8 +3606,7 @@ FOUNDATION_EXTERN NSString * const kGTLRSheets_WaterfallChartSpec_StackedType_Wa
  *  Adds a data source. After the data source is added successfully, an
  *  associated DATA_SOURCE sheet is created and an execution is triggered to
  *  refresh the sheet to read data from the data source. The request requires an
- *  additional `bigquery.readonly` OAuth scope if you are adding a BigQuery data
- *  source.
+ *  additional `bigquery.readonly` OAuth scope.
  */
 @interface GTLRSheets_AddDataSourceRequest : GTLRObject
 
@@ -5414,9 +5412,7 @@ GTLR_DEPRECATED
 
 /**
  *  Cancels one or multiple refreshes of data source objects in the spreadsheet
- *  by the specified references. The request requires an additional
- *  `bigquery.readonly` OAuth scope if you are cancelling a refresh on a
- *  BigQuery data source.
+ *  by the specified references.
  */
 @interface GTLRSheets_CancelDataSourceRefreshRequest : GTLRObject
 
@@ -7027,9 +7023,6 @@ GTLR_DEPRECATED
 /** A BigQueryDataSourceSpec. */
 @property(nonatomic, strong, nullable) GTLRSheets_BigQueryDataSourceSpec *bigQuery;
 
-/** A LookerDatasourceSpec. */
-@property(nonatomic, strong, nullable) GTLRSheets_LookerDataSourceSpec *looker;
-
 /** The parameters of the data source, used when querying the data source. */
 @property(nonatomic, strong, nullable) NSArray<GTLRSheets_DataSourceParameter *> *parameters;
 
@@ -7644,7 +7637,7 @@ GTLR_DEPRECATED
 /**
  *  Limits the selected developer metadata to that which has a matching
  *  DeveloperMetadata.visibility. If left unspecified, all developer metadata
- *  visible to the requesting project is considered.
+ *  visibile to the requesting project is considered.
  *
  *  Likely values:
  *    @arg @c kGTLRSheets_DeveloperMetadataLookup_Visibility_DeveloperMetadataVisibilityUnspecified
@@ -8852,23 +8845,6 @@ GTLR_DEPRECATED
 
 
 /**
- *  The specification of a Looker data source.
- */
-@interface GTLRSheets_LookerDataSourceSpec : GTLRObject
-
-/** Name of a Looker model explore. */
-@property(nonatomic, copy, nullable) NSString *explore;
-
-/** A Looker instance URL. */
-@property(nonatomic, copy, nullable) NSString *instanceUri;
-
-/** Name of a Looker model. */
-@property(nonatomic, copy, nullable) NSString *model;
-
-@end
-
-
-/**
  *  Allows you to manually organize the values in a source data column into
  *  buckets with names of your choosing. For example, a pivot table that
  *  aggregates population by state: +-------+-------------------+ | State | SUM
@@ -9902,10 +9878,9 @@ GTLR_DEPRECATED
 /**
  *  Refreshes one or multiple data source objects in the spreadsheet by the
  *  specified references. The request requires an additional `bigquery.readonly`
- *  OAuth scope if you are refreshing a BigQuery data source. If there are
- *  multiple refresh requests referencing the same data source objects in one
- *  batch, only the last refresh request is processed, and all those requests
- *  will have the same response accordingly.
+ *  OAuth scope. If there are multiple refresh requests referencing the same
+ *  data source objects in one batch, only the last refresh request is
+ *  processed, and all those requests will have the same response accordingly.
  */
 @interface GTLRSheets_RefreshDataSourceRequest : GTLRObject
 
@@ -10415,14 +10390,6 @@ GTLR_DEPRECATED
  */
 @interface GTLRSheets_SetDataValidationRequest : GTLRObject
 
-/**
- *  Optional. If true, the data validation rule will be applied to the filtered
- *  rows as well.
- *
- *  Uses NSNumber of boolValue.
- */
-@property(nonatomic, strong, nullable) NSNumber *filteredRowsIncluded;
-
 /** The range the data validation rule should apply to. */
 @property(nonatomic, strong, nullable) GTLRSheets_GridRange *range;
 
@@ -10850,9 +10817,7 @@ GTLR_DEPRECATED
 
 /**
  *  Whether to allow external URL access for image and import functions. Read
- *  only when true. When false, you can set to true. This value will be bypassed
- *  and always return true if the admin has enabled the [allowlisting
- *  feature](https://support.google.com/a?p=url_allowlist).
+ *  only when true. When false, you can set to true.
  *
  *  Uses NSNumber of boolValue.
  */
@@ -11130,34 +11095,30 @@ GTLR_DEPRECATED
 @interface GTLRSheets_TimeOfDay : GTLRObject
 
 /**
- *  Hours of a day in 24 hour format. Must be greater than or equal to 0 and
- *  typically must be less than or equal to 23. An API may choose to allow the
- *  value "24:00:00" for scenarios like business closing time.
+ *  Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to
+ *  allow the value "24:00:00" for scenarios like business closing time.
  *
  *  Uses NSNumber of intValue.
  */
 @property(nonatomic, strong, nullable) NSNumber *hours;
 
 /**
- *  Minutes of an hour. Must be greater than or equal to 0 and less than or
- *  equal to 59.
+ *  Minutes of hour of day. Must be from 0 to 59.
  *
  *  Uses NSNumber of intValue.
  */
 @property(nonatomic, strong, nullable) NSNumber *minutes;
 
 /**
- *  Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and
- *  less than or equal to 999,999,999.
+ *  Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
  *
  *  Uses NSNumber of intValue.
  */
 @property(nonatomic, strong, nullable) NSNumber *nanos;
 
 /**
- *  Seconds of a minute. Must be greater than or equal to 0 and typically must
- *  be less than or equal to 59. An API may allow the value 60 if it allows
- *  leap-seconds.
+ *  Seconds of minutes of the time. Must normally be from 0 to 59. An API may
+ *  allow the value 60 if it allows leap-seconds.
  *
  *  Uses NSNumber of intValue.
  */
@@ -11559,7 +11520,7 @@ GTLR_DEPRECATED
  *  Updates a data source. After the data source is updated successfully, an
  *  execution is triggered to refresh the associated DATA_SOURCE sheet to read
  *  data from the updated data source. The request requires an additional
- *  `bigquery.readonly` OAuth scope if you are updating a BigQuery data source.
+ *  `bigquery.readonly` OAuth scope.
  */
 @interface GTLRSheets_UpdateDataSourceRequest : GTLRObject
 

@@ -13,13 +13,26 @@ import FirebaseStorage
 class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
 
     // MARK: - Published Variables
-    
+    @Published var isLoading = false
+    @Published var isValid = false
     @Published var displayModel: BugPresentedDataViewModel?
-    @Published var note = ""
+    @Published var note: String = "" {
+            didSet {
+                checkIsValid()
+            }
+        }
+
+    @Published var bugTitle: String = "" {
+            didSet {
+                checkIsValid()
+            }
+        }
+
     @Published var bugImage: UIImage?
     // MARK: - Variables
     var actionsSubject = PassthroughSubject<BugDetailActions, Never>()
     var callback: BugDetailViewModelCallback
+    var uploadedImg: String = ""
     private var useCase: GoogelSheetUseCase
     private var cancellables = Set<AnyCancellable>()
     init(displayModel: BugPresentedDataViewModel?, callback: @escaping BugDetailViewModelCallback, useCase: GoogelSheetUseCase) {
@@ -39,6 +52,14 @@ class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
                 switch action {
                 case .back:
                     self.callback(.back)
+                case .submitBug:
+                    if self.bugTitle.isEmpty || self.note.isEmpty || self.bugTitle.isEmpty{
+                        print("Please fill all fields")
+                    }else{
+                        Task {
+                            await self.insertBugInfo(bugImage: self.uploadedImg)
+                        }
+                    }
                 }
             }
             .store(in: &cancellables)
@@ -48,31 +69,59 @@ class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
         if let image  = bugImage{
             Task {
                 do {
+                    await toggleLoading(true)
                     let url = try await FirebaseStorageManager.shared.uploadImage(image)
                     print("Image uploaded: \(url)")
-                    await insertBugInfo()
-                    
+                    self.uploadedImg = url
+                    await toggleLoading(false)
+                    await checkIsValid()
+//                    await insertBugInfo(bugImage: url)
                 } catch {
                     print("Upload failed: \(error.localizedDescription)")
                 }
             }
         }
     }
+
+    func getCurrentDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let formattedDate = dateFormatter.string(from: Date())
+        return formattedDate
+    }
     
     @MainActor
-    private func insertBugInfo() async {
+    private func insertBugInfo(bugImage:String) async {
         do {
-            //toggleLoading(true)
-            let BugItsResult = try await useCase.insertBugInfo()
-            // toggleLoading(false)
+            await toggleLoading(true)
+            _ = try await useCase.insertBugInfo(bugName: bugTitle,
+                                                bugImage: bugImage,
+                                                bugDecription: note,
+                                                bugDate: getCurrentDate())
+            await toggleLoading(false)
         } catch {
             //  dataStatus = .failure(.invalidData)
         }
+    }
+
+    func checkIsValid() {
+        if self.bugImage.isEmpty || self.note.isEmpty || self.bugTitle.isEmpty{
+            isValid = false
+        } else{
+            isValid = true
+        }
+    }
+    
+    
+    @MainActor
+    func toggleLoading(_ bool: Bool) {
+        isLoading = bool
     }
 }
 
 extension BugDetailViewModel {
     enum BugDetailActions {
         case back
+        case submitBug
     }
 }
