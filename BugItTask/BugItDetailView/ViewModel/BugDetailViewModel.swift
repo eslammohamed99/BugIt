@@ -18,13 +18,17 @@ class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
     @Published var displayModel: BugPresentedDataViewModel?
     @Published var note: String = "" {
             didSet {
-                checkIsValid()
+                Task{
+                    await checkIsValid()
+                }
             }
         }
 
     @Published var bugTitle: String = "" {
             didSet {
-                checkIsValid()
+                Task{
+                    await checkIsValid()
+                }
             }
         }
 
@@ -104,11 +108,11 @@ class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
         }
     }
 
-    func checkIsValid() {
+    func checkIsValid() async {
         if self.uploadedImg.isEmpty || self.note.isEmpty || self.bugTitle.isEmpty{
-            isValid = false
+            await toggleValid(false)
         } else{
-            isValid = true
+            await toggleValid(true)
         }
     }
     
@@ -116,6 +120,11 @@ class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
     @MainActor
     func toggleLoading(_ bool: Bool) {
         isLoading = bool
+    }
+
+    @MainActor
+    func toggleValid(_ bool: Bool) {
+        isValid = bool
     }
 }
 

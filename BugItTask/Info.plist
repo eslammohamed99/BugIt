@@ -21,5 +21,7 @@
 	</array>
 	<key>GOOGLE_SHEETS_API_KEY</key>
 	<string>AIzaSyBp4Dg4-ARNbEbaHOGJd1iHEL23sPO8G_U</string>
+	<key>GOOGLE_CLIENT_ID</key>
+	<string>626858478753-q236gnnbkggnb6d0ghq7ta1u4v69uggs.apps.googleusercontent.com</string>
 </dict>
 </plist>
