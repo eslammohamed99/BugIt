@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct BugDetailUIView: View {
     @ObservedObject  var viewModel: BugDetailViewModel
@@ -22,7 +23,7 @@ struct BugDetailUIView: View {
             VStack(alignment: .leading, spacing: 10) {
                 VStack {
                     if let image = viewModel.displayModel?.image{
-                        Image(image)
+                        KFImage(URL(string: image)!)
                             .resizable()
                     }
                     else if let image = viewModel.bugImage{

@@ -105,7 +105,7 @@ class BugDetailViewModel: BugDetailViewModelProtocol, ObservableObject {
     }
 
     func checkIsValid() {
-        if self.bugImage.isEmpty || self.note.isEmpty || self.bugTitle.isEmpty{
+        if self.uploadedImg.isEmpty || self.note.isEmpty || self.bugTitle.isEmpty{
             isValid = false
         } else{
             isValid = true
